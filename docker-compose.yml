@@ -1,0 +1,10 @@
+version: '2'
+services:
+  dockerclean:
+    image: docker
+    read_only: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - $PWD/run/data/dockerclean-docker-clean/docker-clean:/docker-clean/docker-clean:ro
+    network_mode: none
+    command: /docker-clean/docker-clean
