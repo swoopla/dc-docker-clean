@@ -5,6 +5,5 @@ services:
     read_only: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - $PWD/run/data/dockerclean-docker-clean/docker-clean:/docker-clean/docker-clean:ro
+      - $PWD/run/scripts/usr-local-bin/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
     network_mode: none
-    command: /docker-clean/docker-clean
